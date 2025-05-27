@@ -1,0 +1,338 @@
+************************************************************
+************* EXECUTION WITH DELFI: ************************
+************************************************************
+Planning service: https://solver.planning.domains:5001/package/delfi/solve
+Domain: Rover4, Problem: roverprob1234
+Parsing pddl.....
+Parsing pddl..: [0.020s CPU, 0.012s wall-clock]
+Normalizing task.....
+Normalizing task..: [0.000s CPU, 0.004s wall-clock]
+Creating abstract structure graph.....
+Creating abstract structure graph..: [0.060s CPU, 0.055s wall-clock]
+Computing image from given graph...
+Using graph input file /tmp/tmp2w3hbf8l/abstract-structure-graph.txt
+Using image output directory /tmp/tmp2w3hbf8l
+Writing abstract structure graph grayscale 8bit image.....
+Grayscale color: 255
+Creating matrix for a graph with 7114 nodes..
+Matrix size when created: 405099648
+Matrix created, filling with values for edges..
+Performing bolding.
+Matrix size when 1s added: 405099648
+Number of graph nodes: 7116
+Shrink ratio: 3
+Shrinking matrix to size 2372x2372..
+Shrinked matrix size when created: 45011072
+Writing grayscale image of size 128x128 ..
+Writing abstract structure graph grayscale 8bit image..: [0.940s CPU, 0.316s wall-clock]
+Done computing image! [1.110s CPU, 0.327s wall-clock]
+
+==== Computing an abstract structure graph from the lifted task description... ====
+
+
+==== Done computing an abstract structure graph. ====
+
+
+==== Selecting planner from learned model... ====
+
+Using json model file /workspace/delfi/dl_model/models/lifted/model.json
+Using h5 model file /workspace/delfi/dl_model/models/lifted/model.h5
+Loaded model from disk
+Chose seq-opt-symba-1
+
+==== Done selecting planner from learned model. ====
+
+
+==== Running the selected planner... ====
+
+Running planner, call string: ['/usr/bin/python', '/workspace/delfi/symba.py', 'seq-opt-symba-1', 'domain', 'problem', 'plan']
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.010s CPU, 0.004s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.005s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.080s CPU, 0.075s wall-clock]
+Preparing model... [0.030s CPU, 0.028s wall-clock]
+Generated 1591 rules.
+Computing model... [0.070s CPU, 0.067s wall-clock]
+767 relevant atoms
+3439 auxiliary atoms
+4206 final queue length
+8957 total queue pushes
+Completing instantiation... [0.100s CPU, 0.105s wall-clock]
+Instantiating: [0.290s CPU, 0.284s wall-clock]
+Computing fact groups...
+Finding invariants...
+51 initial candidates
+Finding invariants: [0.290s CPU, 0.292s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+37 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.290s CPU, 0.293s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.009s wall-clock]
+Translating task: [0.190s CPU, 0.193s wall-clock]
+0 implied effects removed
+3840 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+15 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.026s wall-clock]
+Translator variables: 43
+Translator derived variables: 0
+Translator facts: 90
+Translator mutex groups: 10
+Translator total mutex groups size: 24
+Translator operators: 608
+Translator task size: 16296
+Translator peak memory: 41924 KB
+Writing output... [0.020s CPU, 0.016s wall-clock]
+Done! [0.830s CPU, 0.829s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+36 variables of 43 necessary
+0 of 10 mutex groups necessary.
+608 of 608 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 76 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=1296, notReached=4388, spurious=92
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=5648, notReached=36, spurious=92
+58 operators are spurious because were not triggered
+H^2 mutexes added fw: 36, unreachable: 0
+0 of 550 operators detected as spurious
+Total mutex and disambiguation time: 0.014088
+18 of 18 mutex groups necessary.
+550 of 608 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 550
+Change id of axioms: 0
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 36
+18 of 18 mutex groups necessary.
+550 of 550 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+36 variables of 36 of 43 necessary
+The causal graph is not acyclic.
+18 of 18 mutex groups necessary.
+550 of 550 operators necessary.
+0 of 0 axiom rules necessary.
+Ordering: 36
+previous variable order: var1 - var39 - var40 - var41 - var42 - var23 - var13 - var15 - var19 - var17 - var21 - var9 - var11 - var2 - var3 - var4 - var5 - var6 - var7 - var0 - var34 - var35 - var36 - var37 - var38 - var22 - var12 - var14 - var18 - var16 - var20 - var8 - var10 - var32 - var30 - var27 - : 22615
+New value: 11523
+New value: 11484
+New value: 11463
+New value: 11152
+new variable order: var32 - var6 - var7 - var5 - var34 - var2 - var3 - var4 - var10 - var12 - var0 - var8 - var18 - var20 - var16 - var14 - var30 - var36 - var35 - var22 - var37 - var38 - var27 - var42 - var39 - var11 - var9 - var1 - var13 - var17 - var15 - var21 - var19 - var23 - var40 - var41 - : 11152
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 76
+Preprocessor derived variables: 0
+Preprocessor task size: 14492
+Writing output...
+Number of vars: 36
+weighted 36
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a unit task.
+Simplifying transitions... done!
+Mutex type changed to mutex_and because the domain has conditional effects
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=and)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Mutex type changed to mutex_and because the domain has conditional effects
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=and)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Mutex type changed to mutex_and because the domain has conditional effects
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=and)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Mutex type changed to mutex_and because the domain has conditional effects
+Initializing Symbolic Variables
+Num variables: 36 => 38
+Initialize Symbolic Manager(76, 210526, 16000000, 0)
+Generating binary variables
+Generating predicate BDDs
+Symbolic Variables... Done.
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=and)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=45000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+SymBA* 
+   Search dir: bd
+   Time force original: 1500 seconds
+Conducting symbolic search Operator cost: 0 (real) bound = 2147483647
+Initialize abstraction hierarchy
+Mutex BDD BW Size(100000): 36
+Mutex BDD FW Size(100000):
+TRs cost=1 (1):  2650
+BOUND: 1 < 2147483647, total time: 0.2s
+>> Step: original fw f=1, g=0
+BOUND: 2 < 2147483647, total time: 0.2s
+>> Step: original bw f=2, g=0
+BOUND: 3 < 2147483647, total time: 0.2s
+>> Step: original fw f=3, g=1
+BOUND: 4 < 2147483647, total time: 0.2s
+>> Step: original fw f=4, g=2
+BOUND: 5 < 2147483647, total time: 0.2s
+>> Step: original fw f=5, g=3
+BOUND: 6 < 2147483647, total time: 0.22s
+>> Step: original bw f=6, g=1
+BOUND: 7 < 2147483647, total time: 0.22s
+>> Step: original bw f=7, g=2
+BOUND: 8 < 2147483647, total time: 0.22s
+>> Step: original bw f=8, g=3
+BOUND: 9 < 2147483647, total time: 0.22s
+>> Step: original bw f=9, g=4
+BOUND: 10 < 2147483647, total time: 0.22s
+>> Step: original bw f=10, g=5
+BOUND: 11 < 2147483647, total time: 0.22s
+>> Step: original bw f=11, g=6
+BOUND: 12 < 2147483647, total time: 0.22s
+>> Step: original bw f=12, g=7
+BOUND: 13 < 2147483647, total time: 0.24s
+>> Step: original fw f=13, g=4
+Solution found with cost 13 total time: 0.24s
+BOUND: 13 < 13, total time: 0.26s
+Actual search time: 0.06s [t=0.26s]
+sample_rock rover0 rover0store waypoint3 battery0 (1)
+communicate_rock_data rover0 general waypoint3 waypoint3 waypoint0 battery0 (1)
+navigate rover0 waypoint3 waypoint0 battery0 (1)
+drop rover0 rover0store battery0 (1)
+calibrate rover0 camera0 objective1 waypoint0 battery0 (1)
+take_image rover0 waypoint0 objective1 camera0 high_res battery0 (1)
+charge rover0 general waypoint0 battery0 (1)
+navigate rover0 waypoint0 waypoint3 battery0 (1)
+communicate_image_data rover0 general objective1 high_res waypoint3 waypoint0 battery0 (1)
+navigate rover0 waypoint3 waypoint1 battery0 (1)
+navigate rover0 waypoint1 waypoint2 battery0 (1)
+sample_soil rover0 rover0store waypoint2 battery0 (1)
+communicate_soil_data rover0 general waypoint2 waypoint2 waypoint0 battery0 (1)
+Plan length: 13 step(s).
+Plan cost: 13
+Expanded 0 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 0
+Generated 0 state(s).
+Dead ends: 0 state(s).
+Search space hash size: 0
+Search space hash bucket count: 193
+Search time: 0.12s
+Total time: 0.26s
+Solution found.
+Peak memory: 220528 KB
+
+Overall time: [1.830s CPU, 1.847s wall-clock]
+
+==== Done running the selected planner. ====
+
+
+Error: Using TensorFlow backend.
+
+
+Plan found:
+0.00000: (sample_rock rover0 rover0store waypoint3 battery0)
+0.00100: (communicate_rock_data rover0 general waypoint3 waypoint3 waypoint0 battery0)
+0.00200: (navigate rover0 waypoint3 waypoint0 battery0)
+0.00300: (drop rover0 rover0store battery0)
+0.00400: (calibrate rover0 camera0 objective1 waypoint0 battery0)
+0.00500: (take_image rover0 waypoint0 objective1 camera0 high_res battery0)
+0.00600: (charge rover0 general waypoint0 battery0)
+0.00700: (navigate rover0 waypoint0 waypoint3 battery0)
+0.00800: (communicate_image_data rover0 general objective1 high_res waypoint3 waypoint0 battery0)
+0.00900: (navigate rover0 waypoint3 waypoint1 battery0)
+0.01000: (navigate rover0 waypoint1 waypoint2 battery0)
+0.01100: (sample_soil rover0 rover0store waypoint2 battery0)
+0.01200: (communicate_soil_data rover0 general waypoint2 waypoint2 waypoint0 battery0)
+Metric: 0.012000000000000004
+Makespan: 0.012000000000000004
+States evaluated: undefined
+Planner found 1 plan(s) in 17.351secs.

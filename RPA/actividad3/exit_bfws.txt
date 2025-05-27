@@ -1,0 +1,59 @@
+Planning service: https://solver.planning.domains:5001/package/dual-bfws-ffparser/solve
+Domain: Rover4, Problem: roverprob1234
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 608 nodes.
+
+PDDL problem description loaded: 
+	Domain: ROVER4
+	Problem: ROVERPROB1234
+	#Actions: 608
+	#Fluents: 59
+Goals found: 3
+Goals_Edges found: 3
+Starting search with 1-BFWS...
+--[3 / 0]--
+--[3 / 6]--
+--[3 / 7]--
+--[3 / 8]--
+--[3 / 13]--
+--[3 / 14]--
+--[3 / 15]--
+--[2 / 0]--
+--[2 / 9]--
+--[2 / 14]--
+--[2 / 15]--
+--[1 / 0]--
+--[1 / 6]--
+--[1 / 11]--
+--[1 / 12]--
+--[0 / 0]--
+--[0 / 11]--
+Total time: 0.001546
+Nodes generated during search: 203
+Nodes expanded during search: 106
+Plan found with cost: 13
+Fast-BFS search completed in 0.001546 secs
+
+
+Plan found:
+0.00000: (SAMPLE_ROCK ROVER0 ROVER0STORE WAYPOINT3 BATTERY0)
+0.00100: (COMMUNICATE_ROCK_DATA ROVER0 GENERAL WAYPOINT3 WAYPOINT3 WAYPOINT0 BATTERY0)
+0.00200: (CALIBRATE ROVER0 CAMERA0 OBJECTIVE1 WAYPOINT3 BATTERY0)
+0.00300: (TAKE_IMAGE ROVER0 WAYPOINT3 OBJECTIVE1 CAMERA0 HIGH_RES BATTERY0)
+0.00400: (COMMUNICATE_IMAGE_DATA ROVER0 GENERAL OBJECTIVE1 HIGH_RES WAYPOINT3 WAYPOINT0 BATTERY0)
+0.00500: (NAVIGATE ROVER0 WAYPOINT3 WAYPOINT0 BATTERY0)
+0.00600: (CHARGE ROVER0 GENERAL WAYPOINT0 BATTERY0)
+0.00700: (NAVIGATE ROVER0 WAYPOINT0 WAYPOINT3 BATTERY0)
+0.00800: (NAVIGATE ROVER0 WAYPOINT3 WAYPOINT1 BATTERY0)
+0.00900: (NAVIGATE ROVER0 WAYPOINT1 WAYPOINT2 BATTERY0)
+0.01000: (DROP ROVER0 ROVER0STORE BATTERY0)
+0.01100: (SAMPLE_SOIL ROVER0 ROVER0STORE WAYPOINT2 BATTERY0)
+0.01200: (COMMUNICATE_SOIL_DATA ROVER0 GENERAL WAYPOINT2 WAYPOINT2 WAYPOINT0 BATTERY0)
+Metric: 0.012000000000000004
+Makespan: 0.012000000000000004
+States evaluated: undefined
+Planner found 1 plan(s) in 3.619secs.

@@ -1,0 +1,23 @@
+DATASET INFORMATIO
+Predecir el tipo de cobertura forestal a partir de variables cartográficas únicamente (sin datos obtenidos por teledetección). El tipo real de cobertura forestal para una observación dada (una celda de 30 x 30 metros) se determinó a partir de datos del Sistema de Información de Recursos (RIS) de la Región 2 del Servicio Forestal de los EE. UU. (USFS). Las variables independientes se derivaron de datos obtenidos originalmente del Servicio Geológico de los EE. UU. (USGS) y del USFS. Los datos están en forma bruta (no escalados) y contienen columnas binarias (0 o 1) para variables independientes cualitativas (áreas silvestres y tipos de suelo).
+Esta área de estudio incluye cuatro áreas silvestres ubicadas en el Bosque Nacional Roosevelt, en el norte de Colorado. Estas áreas representan bosques con mínimas perturbaciones causadas por el ser humano, por lo que los tipos de cobertura forestal existentes son más un resultado de procesos ecológicos que de prácticas de manejo forestal.
+Algo de información de contexto sobre estas cuatro áreas silvestres: Neota (área 2) probablemente tiene el valor promedio de elevación más alto de las 4 áreas silvestres. Rawah (área 1) y Comanche Peak (área 3) tendrían un valor promedio de elevación más bajo, mientras que Cache la Poudre (área 4) tendría el valor promedio de elevación más bajo de todas.
+En cuanto a las principales especies arbóreas en estas áreas, Neota tendría abeto/abeto rojo (tipo 1), mientras que Rawah y Comanche Peak probablemente tendrían pino lodgepole (tipo 2) como su especie principal, seguido de abeto/abeto rojo y álamo temblón (tipo 5). Cache la Poudre tendería a tener pino ponderosa (tipo 3), abeto de Douglas (tipo 6) y álamo/cauce de río (tipo 4).
+Las áreas de Rawah y Comanche Peak tenderían a ser más representativas del conjunto de datos en general que Neota o Cache la Poudre, debido a su variedad de especies arbóreas y rango de valores de variables predictivas (elevación, etc.). Cache la Poudre probablemente sería más única que las otras, debido a su rango de elevación relativamente bajo y composición de especies.
+
+INFORMACIÓN DE LAS VARIABLES 
+Se proporciona el nombre del atributo, el tipo de dato, la unidad de medida y una breve descripción. El tipo de cobertura forestal es el problema de clasificación. El orden de esta lista corresponde al orden de los números a lo largo de las filas de la base de datos.
+- Nombre / Tipo de Dato / Unidad de Medida / Descripción
+- Elevation / cuantitativo / metros / Elevación en metros
+- Aspect / cuantitativo / acimut / Orientación en grados acimut
+- Slope / cuantitativo / grados / Inclinación en grados
+- Horizontal_Distance_To_Hydrology / cuantitativo / metros / Distancia horizontal a las características de agua superficial más cercanas
+- Vertical_Distance_To_Hydrology / cuantitativo / metros / Distancia vertical a las características de agua superficial más cercanas
+- Horizontal_Distance_To_Roadways / cuantitativo / metros / Distancia horizontal a la carretera más cercana
+- Hillshade_9am / cuantitativo / índice de 0 a 255 / Índice de sombra de colina a las 9:00 a. m., solsticio de verano
+- Hillshade_Noon / cuantitativo / índice de 0 a 255 / Índice de sombra de colina al mediodía, solsticio de verano
+- Hillshade_3pm / cuantitativo / índice de 0 a 255 / Índice de sombra de colina a las 3:00 p. m., solsticio de verano
+- Horizontal_Distance_To_Fire_Points / cuantitativo / metros / Distancia horizontal a los puntos de ignición de incendios forestales más cercanos
+- Wilderness_Area (4 columnas binarias) / cualitativo / 0 (ausencia) o 1 (presencia) / Designación de área silvestre
+- Soil_Type (40 columnas binarias) / cualitativo / 0 (ausencia) o 1 (presencia) / Designación de tipo de suelo
+- Cover_Type (7 tipos) / entero / 1 a 7 / Designación del tipo de cobertura forestal
